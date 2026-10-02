@@ -16,28 +16,28 @@ btn.addEventListener("click", function (){
 			setTimeout(()=>{
 				output.innerHTML = `Result: ${num*2}`
 				resolve(num*2)
-			})
+			},2000)
 		})
 	}).then((num)=>{
 		return new Promise((resolve , reject)=>{
 			setTimeout(()=>{
 				output.innerHTML = `Result: ${num-3}`
 				resolve(num-3)
-			})
+			},1000)
 		})
 	}).then((num)=>{
 		return new Promise((resolve , reject)=>{
 			setTimeout(()=>{
 				output.innerHTML = `Result: ${num/2}`
 				resolve(num/2)
-			})
+			},1000)
 		})
 	}).then((num)=>{
 		return new Promise((resolve , reject)=>{
 			setTimeout(()=>{
 				output.innerHTML = `Final Result: ${num + 10}`
 				resolve(num + 10)
-			})
+			},1000)
 		})
 	})
 })
